@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import {ShopContext} from '../contex';
+import {ShopContext} from '../context';
 
 function Alert (){
     const {alertName: name = '', closeAlert = Function.prototype} = useContext(ShopContext);

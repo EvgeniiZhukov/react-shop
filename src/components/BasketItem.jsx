@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import {ShopContext} from '../contex';
+import {ShopContext} from '../context';
 
 function BasketItem (props) {
     const {
