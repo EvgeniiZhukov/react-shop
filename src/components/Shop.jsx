@@ -7,7 +7,7 @@ import { GoodsList } from "./GoodsList";
 import {ShoppingCart} from "./SoppingCart"
 import { BasketList } from "./BasketList";
 import { Alert } from "./Alert";
-import { ShopContext } from "../contex";
+import { ShopContext } from "../context";
 
 function Shop() {
     const {loading, order, isBasketShow, alertName, setGoods} = useContext(ShopContext);
