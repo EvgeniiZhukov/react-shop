@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import {ShopContext} from '../contex';
+
 function BasketItem (props) {
     const {
         displayName,
@@ -5,10 +8,10 @@ function BasketItem (props) {
         offerId,
         picture,
         quantity, 
-        removeItem = Function.prototype,
-        incQuantity = Function.prototype,
-        decQuantity = Function.prototype
     } = props;
+
+    const {removeFromBasket, incQuantity, decQuantity} = useContext(ShopContext);
+
 return (
     <li className="collection-item avatar" id = {offerId}>
         <img src={picture} alt="" className="circle"/>
@@ -29,7 +32,7 @@ return (
                     add 
                     </i>
         </p>
-        <span className="secondary-content"><i className="material-icons basket-delete" onClick = {() => {removeItem({offerId})}}>delete</i></span>
+        <span className="secondary-content"><i className="material-icons basket-delete" onClick = {() => {removeFromBasket(offerId)}}>delete</i></span>
     </li>
 );
 }
